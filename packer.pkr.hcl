@@ -32,7 +32,7 @@ build {
       "sudo yum -y update",
       "sudo amazon-linux-extras install postgresql10 vim epel",
       "sudo yum install -y postgresql-server postgresql-devel",
-      "/usr/bin/postgresql-setup –-initdb",
+      "sudo /usr/bin/postgresql-setup --initdb",
       "sudo systemctl enable postgresql",
     ]
   }
