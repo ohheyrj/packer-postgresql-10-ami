@@ -30,10 +30,10 @@ build {
   provisioner "shell" {
     inline = [
       "sudo yum -y update",
-      "sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm",
-      "sudo yum install -y postgresql10-server",
-      "sudo /usr/pgsql-10/bin/postgresql-10-setup initdb",
-      "sudo systemctl enable postgresql-10"
+      "sudo amazon-linux-extras install postgresql10 vim epel",
+      "sudo yum install -y postgresql-server postgresql-devel",
+      "/usr/bin/postgresql-setup –-initdb",
+      "sudo systemctl enable postgresql",
     ]
   }
 }
